@@ -9,13 +9,13 @@ class Solution {
         {
             
             
-            // long t=i;
+            int t=i;
             c=0;
-            // while(t>0){
-            //     t=t>>>1;
-            //     c++;
-            // }
-            c=((int)(Math.log(i)/Math.log(2))+1);
+            while(t>0){
+                t=t>>>1;
+                c++;
+            }
+          //  c=((int)(Math.log(i)/Math.log(2))+1);
             sum=((sum<<c)+i)%mod;
         }
         return((int)sum%mod);
