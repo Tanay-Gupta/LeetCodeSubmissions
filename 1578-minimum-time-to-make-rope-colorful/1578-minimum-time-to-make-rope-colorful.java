@@ -15,13 +15,10 @@ class Solution {
                if(k==1)
                {
                      finalsum=finalsum+(sum-max);
-                  //  System.out.println("final="+finalsum);
                       k=0;
                }
-              
                 sum=0;
                 max=neededTime[i];
-                
             }
             else
             {
@@ -29,13 +26,10 @@ class Solution {
                 max=Math.max(max,neededTime[i]);
             }
             sum=sum+neededTime[i];
-          //  System.out.println("sum="+sum);
             
         }
         if(k==1)
-               {
-                     finalsum=finalsum+(sum-max);    
-               }
+          finalsum=finalsum+(sum-max);
         return(finalsum);
         
     }
