@@ -19,25 +19,12 @@ class Solution {
     {
      if(root==null)
          return(true);
+       return(root.val>min&&root.val<max&&validHaiNa(root.left,min,root.val)&&validHaiNa(root.right,root.val,max));
     
-    if(root.val>min&&root.val<max)
-    {
-         return(validHaiNa(root.left,min,root.val)&&validHaiNa(root.right,root.val,max));
-    }
-       
-            return(false);
-    
-        
     }
     public boolean isValidBST(TreeNode root) {
-        
-        
 
-        
         return(validHaiNa(root,Long.MIN_VALUE,Long.MAX_VALUE));
-      
-       
-        
-        
+    
     }
 }
