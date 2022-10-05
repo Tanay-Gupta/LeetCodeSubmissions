@@ -29,7 +29,7 @@ class Solution {
         
         if(root.left==null&&root.right==null)
         {
-            //System.out.println(ar.get(ar.size()-1));
+          
              final_sum+=ar.get(ar.size()-1);
         }
        
