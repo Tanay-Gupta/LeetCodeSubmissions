@@ -37,7 +37,7 @@ class Solution {
         while(!queue.isEmpty())
         {
              count++;
-            System.out.println(count);
+           // System.out.println(count);
             int size=queue.size();
             if(count==depth-1)
             {
@@ -50,9 +50,7 @@ class Solution {
                     temp1.left=temp1.right=temp2.left=temp2.right=null;
                     temp1.left=curr.left;
                     temp2.right=curr.right;
-                   // if(curr.left!=null)
                         curr.left=temp1;
-                   // if(curr.right!=null)
                         curr.right=temp2;
    
                 }
