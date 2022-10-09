@@ -11,10 +11,19 @@ class Solution {
          
          ans=Math.max(ans,Math.min(a[s],a[e])*(e-s));
          if(a[s]<=a[e])
-             s=s+1;
+         {
+              int hl = a[s];
+               while(s < e && a[s] <= hl)
+                s++;
+         }
+      
          else
-             e=e-1;
-         
+         {
+             int hr=a[e];
+             while(s<e&&a[e]<=hr)
+                 e--;
+         }
+            
      }
         return(ans);
     }
