@@ -6,10 +6,10 @@ class Solution {
             return("");
         int k=0;
         char ch[]=s.toCharArray();
-        for(int i=0;i<ch.length;i++)
+        for(int i=0;i<ch.length/2;i++)
         {
           
-            if(ch[i]!='a'&&i!=l/2)
+            if(ch[i]!='a')
             {
                 ch[i]='a';
                 k=1;
