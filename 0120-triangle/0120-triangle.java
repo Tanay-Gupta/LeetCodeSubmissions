@@ -1,22 +1,22 @@
 class Solution {
     
     
-    int dp[][];
-    public int walk(List<List<Integer>> a, int i,int j)
-    {
-        if(i+1==a.size())
-            return(a.get(i).get(j));
-        if(dp[i][j]!=-1)
-            return(dp[i][j]);
-        int sameIndex,nextIndex;
+//     int dp[][];
+//     public int walk(List<List<Integer>> a, int i,int j)
+//     {
+//         if(i+1==a.size())
+//             return(a.get(i).get(j));
+//         if(dp[i][j]!=-1)
+//             return(dp[i][j]);
+//         int sameIndex,nextIndex;
         
-        sameIndex=a.get(i).get(j)+walk(a,i+1,j);
-        nextIndex=a.get(i).get(j)+walk(a,i+1,j+1);
+//         sameIndex=a.get(i).get(j)+walk(a,i+1,j);
+//         nextIndex=a.get(i).get(j)+walk(a,i+1,j+1);
         
-        return(dp[i][j]=Math.min(sameIndex,nextIndex));
+//         return(dp[i][j]=Math.min(sameIndex,nextIndex));
         
         
-    }
+//     }
     public int minimumTotal(List<List<Integer>> triangle) {
        int n=triangle.size();
         
@@ -25,8 +25,8 @@ class Solution {
 //              Arrays.fill(dp[i],-1);
 //         return(walk(triangle,0,0));
         int dp[]=new int[n];
-      //  int curr[]=new int[n];
-        int size=n;
+     
+        
         int i,j;
         for(i=0;i<n;i++)
             dp[i]=triangle.get(n-1).get(i);
