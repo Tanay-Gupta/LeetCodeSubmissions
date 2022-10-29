@@ -35,7 +35,7 @@ class Solution {
      //    2147483647
      //    2147483476    
 
-  Arrays.sort(ch,mx+1,ch.length);
+Arrays.sort(ch,mx+1,ch.length);
         long t=Long.valueOf(String.valueOf(ch));
         if(t>Integer.MAX_VALUE)
             return(-1);
