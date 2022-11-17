@@ -4,6 +4,9 @@ class Solution {
     public int walk(String s, String t, int i,int j)
     {
         if(j==0)
+            
+            
+
          return( 1);
         if(i==0)
             return(0);
