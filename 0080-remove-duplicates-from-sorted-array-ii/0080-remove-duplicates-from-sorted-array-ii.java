@@ -11,35 +11,25 @@ class Solution {
         while(p2<l)
         {
             
-            if(a[p2]==a[p1])
+            if((a[p2]==a[p1]))
             {
-                if(k==1)
-                {
-                    p2++;
-                    
-                }
+                if(k==1) p2++;   
                 else
-                {
-                    
-                   
+                {   
                        k=1;
-                    p1++;
-                    a[p1]=a[p2];
-                    p2++;  
-                    
-                   
+                    a[++p1]=a[p2++];               
                 }
-                
             }
-            
-            
+              
             else
             {
                 k=0;
-                p1++;
-                a[p1]=a[p2];
-                p2++;
+               
+                a[++p1]=a[p2++];
+               
             }
+            
+          
         }
         
         return (p1+1);
