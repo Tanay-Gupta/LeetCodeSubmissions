@@ -28,7 +28,7 @@ class Solution {
         
 //         return  walk(0,nums);
         
-        //gready solution
+        //greedy solution
         
         int ans=0;
         int n=nums.length;
