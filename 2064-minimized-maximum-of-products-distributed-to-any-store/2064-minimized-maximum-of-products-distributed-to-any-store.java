@@ -15,10 +15,14 @@ class Solution {
             
             int m=s+(e-s)/2;
             int sum=0;
+            int sum1=0;
             for(int i:a)
             {
-                sum+=(i+m-1)/m;
+//               sum1+=(i+m-1)/m;
+                sum+=Math.ceil((double)i/m);
             }
+            
+            
             if(sum>n)
                 s=m+1;
             else
