@@ -23,10 +23,7 @@ class Solution {
     }
   
     public boolean checkValidGrid(int[][] grid) {
-        
-        
-        
-        
+
           walk(grid,0,0,-1);
         return isValid;
         
