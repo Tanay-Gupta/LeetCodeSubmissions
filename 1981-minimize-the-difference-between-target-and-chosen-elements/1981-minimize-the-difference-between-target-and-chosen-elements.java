@@ -21,7 +21,7 @@ class Solution {
             
     }
     public int minimizeTheDifference(int[][] mat, int target) {
-      dp=new Integer[mat.length+1][5000];
+      dp=new Integer[mat.length+1][4901];
         return walk(mat.length-1,mat,target,0);
         
     }
