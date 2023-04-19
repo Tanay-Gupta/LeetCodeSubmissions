@@ -1,6 +1,23 @@
 class Solution {
     
     
+    public boolean dfs(ArrayList<ArrayList<Integer>> adj,int start, int[] color,int col)
+    {
+        
+        color[start]=col;
+        for(int i:adj.get(start))
+        {
+            if(color[i]==-1)
+            { 
+                if(dfs(adj,i,color,1-col)==false)
+                    return false;
+            }
+            else if(color[i]==col)
+                return false;
+        }
+        return true;
+    }
+    
     
     
      public boolean bfs(ArrayList<ArrayList<Integer>> adj,int start,int[] color)
@@ -51,7 +68,7 @@ class Solution {
         {
             if(color[i]==-1)
             {
-                if(bfs(adj,i,color)==false)
+                if(dfs(adj,i,color,0)==false)
                 return false;
             }
         }
