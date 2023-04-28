@@ -19,6 +19,7 @@ class Solution {
         check[node]=true;
         return false;
     }
+   
     public List<Integer> eventualSafeNodes(int[][] graph) {
         
         
