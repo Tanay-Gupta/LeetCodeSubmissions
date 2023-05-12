@@ -1,10 +1,6 @@
 class Solution {
     
-    
-    
     Long dp[];
-    
-    
     public long walk(int i,int a[][])
     {
         
