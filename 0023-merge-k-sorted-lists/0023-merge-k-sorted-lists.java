@@ -9,35 +9,31 @@
  * }
  */
 class Solution {
-    public ListNode mergeKLists(ListNode[] lists) {
+    public ListNode mergeKLists(ListNode[] list) {
         
-        if(lists.length==0)
-            return(null);
         
-        PriorityQueue<Integer> pq=new PriorityQueue<>();
+        PriorityQueue<Integer> q=new PriorityQueue<>();
         
-        int i;
-        
-        for(i=0;i<lists.length;i++)
+        for(int i=0;i<list.length;i++)
         {
-            while(lists[i]!=null)
+            while(list[i]!=null)
             {
-                pq.add(lists[i].val);
-                // System.out.print(lists[i].val+" ");
-                lists[i]=lists[i].next;
+                q.add(list[i].val);
+                list[i]=list[i].next;
             }
-                
         }
-        if(pq.size()==0)
-            return(null);
-        ListNode head=new ListNode(pq.poll());
-        ListNode temp=head;
-        int size=pq.size();
-        for(i=0;i<size;i++)
+        
+        
+        
+        ListNode dummy=new ListNode(0);
+        ListNode temp=dummy;
+        
+        while(!q.isEmpty())
         {
-            temp.next=new ListNode(pq.poll());
+            temp.next=new ListNode(q.poll());
             temp=temp.next;
         }
-        return(head);
+        return dummy.next;
+        
     }
 }
