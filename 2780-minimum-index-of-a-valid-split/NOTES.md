@@ -1,0 +1,1 @@
+https://leetcode.com/problems/minimum-index-of-a-valid-split/discuss/3771388/Find-majority-Boyer-Moore-oror-Very-simple-and-easy-to-understand-solution
