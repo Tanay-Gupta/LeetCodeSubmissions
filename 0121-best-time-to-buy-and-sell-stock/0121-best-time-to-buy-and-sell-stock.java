@@ -11,7 +11,7 @@ class Solution {
             
          
             res=Math.max(res,a[i]-min);
-            System.out.print(res+" ");
+            //System.out.print(res+" ");
             min=Math.min(a[i],min);
            
             
