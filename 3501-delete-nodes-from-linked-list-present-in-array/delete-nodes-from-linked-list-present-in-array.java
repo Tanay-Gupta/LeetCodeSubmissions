@@ -1,42 +1,21 @@
-/**
- * Definition for singly-linked list.
- * public class ListNode {
- * int val;
- * ListNode next;
- * ListNode() {}
- * ListNode(int val) { this.val = val; }
- * ListNode(int val, ListNode next) { this.val = val; this.next = next; }
- * }
- */
 class Solution {
-    public ListNode modifiedList(int[] a, ListNode head) {
-
-        HashSet<Integer> list = new HashSet<>();
-        for (int i = 0; i < a.length; i++) {
-            list.add(a[i]);
+    public ListNode modifiedList(int[] nums, ListNode head) {
+        ListNode res = new ListNode();
+        ListNode resCur = res;
+        ListNode cur = head;
+        Set<Integer> set = new HashSet<>();
+        for (int num : nums) {
+            set.add(num);
         }
-
-       ListNode dummy=new ListNode(0);
-
-       dummy.next=head;
-       ListNode temp=dummy;
-       ListNode curr=dummy.next;
-       while(curr!=null){
-
-        if(list.contains(curr.val)){
-
-            curr=curr.next;
+        
+        while (cur != null) {
+            if (!set.contains(cur.val)) {
+                resCur.next = new ListNode(cur.val);
+                resCur = resCur.next;
+            }
+            cur = cur.next;
         }
-        else
-        {
-        temp.next=curr;
-        curr=curr.next;
-        temp=temp.next;
-        }
-       }
-       temp.next=curr;
-       return dummy.next;
-       
-
+        
+        return res.next;
     }
 }
