@@ -3,10 +3,10 @@
  * @return {Function} counter
  */
 var createCounter = function(n) {
-    let x=-1;
+    let curr=n-1;
     return function() {
-       x=x+1
-       return x+n;
+       curr+=1;
+       return curr;
       
 
         
