@@ -12,8 +12,8 @@ class Solution {
 
 
             if(a[s]==a[m]&&a[m]==a[e]){
-                s=m+1;
-                e=m-1;
+               s++;
+               e--;
                 continue;
             }
             if (a[s] <= a[m]) {
