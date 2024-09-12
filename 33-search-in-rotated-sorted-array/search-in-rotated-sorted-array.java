@@ -10,6 +10,12 @@ class Solution {
             if (a[m] == k)
                 return m;
 
+
+            if(a[s]==a[m]&&a[m]==a[e]){
+                s=m+1;
+                e=m-1;
+                continue;
+            }
             if (a[s] <= a[m]) {
 
                 if (a[s] <= k && a[m] >= k)
